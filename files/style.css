@@ -1,5 +1,7 @@
 :root{
   --clr-dark: rgb(26, 26, 26);
+  --clr-dark-hover: rgb(26, 26, 26, .7);
+  --ft-clr-light: #f3f3f3;
 }
 
 *{
@@ -7,7 +9,7 @@
 }
 
 body{
-  
+  background-color: var(--clr-dark);
 }
 
 #main-index-container{
@@ -36,8 +38,15 @@ body{
 #main-index-menu li{
   flex-basis: 50%;
   list-style-type: none;
+  height: 100%:
 }
 
 #main-index-menu li a{
   max-height: 100%;
+  text-decoration: none;
+  color: var(--ft-clr-light);
+}
+
+#main-index-menu li a:hover{
+  background-color: var(--clr-dark-hover);
 }
