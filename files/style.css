@@ -25,4 +25,5 @@
 
 #main-index-menu li{
   flex-basis: 100%;
+  list-style-type: none;
 }
