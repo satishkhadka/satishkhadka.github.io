@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+}
+
+#main-index-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  aspect-ratio: 1/1;
+}
+
+#main-index-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#main-index-menu{
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Menlo monospace;
+}
+
+#main-index-menu li{
+  flex-basis: 100%;
+}
