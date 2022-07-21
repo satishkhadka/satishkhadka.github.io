@@ -1,29 +1,43 @@
+:root{
+  --clr-dark: rgb(26, 26, 26);
+}
+
 *{
   margin: 0;
+}
+
+body{
+  
 }
 
 #main-index-container{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 500px;
+  width: 100vw;
+  height: 100vh;
   aspect-ratio: 1/1;
 }
 
 #main-index-container img{
-  width: 100%;
+  width: 50%;
   height: 100%;
   object-fit: cover;
 }
 
 #main-index-menu{
-  width: 100%;
-  align-items: center;
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   font-family: Menlo monospace;
 }
 
 #main-index-menu li{
-  flex-basis: 100%;
+  flex-basis: 50%;
   list-style-type: none;
+}
+
+#main-index-menu li a{
+  max-height: 100%;
 }
