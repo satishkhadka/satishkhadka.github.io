@@ -1,11 +1,12 @@
 :root{
   --clr-dark: rgb(26, 26, 26);
-  --clr-dark-hover: rgb(35, 35, 35, .7);
+  --clr-dark-hover: rgb(35, 35, 35);
   --ft-clr-light: #f3f3f3;
 }
 
 *{
   margin: 0;
+  box-sizing: border-box;
 }
 
 body{
@@ -19,6 +20,36 @@ body{
   width: 100vw;
   height: 100vh;
   aspect-ratio: 1/1;
+  position: relative;
+}
+
+@media (max-width: 1200px){
+  #main-index-container{
+    display: block;
+  }
+
+  #main-index-container img{
+    width: 100vw !important;
+  }
+
+  #main-index-menu{
+    width: 100% !important;
+    display: block;
+  }
+
+  #main-index-title{
+    position: inherit;
+    left: 0;
+    bottom: 0;
+  }
+
+  #main-index-menu{
+    display: block !important;
+  }
+
+  #main-index-menu li{
+    height: 25% !important;
+  }
 }
 
 #main-index-container img{
@@ -27,20 +58,46 @@ body{
   object-fit: cover;
 }
 
+#main-index-title{
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  font-size: 2.5em;
+  font-family: monospace;
+  color: var(--ft-clr-light);
+  background-color: var(--clr-dark);
+  padding: .125em;
+}
+
+#main-index-container img::after{
+  content:  "satishkhadka";
+  font-family: sans-serif;
+  font-size: 3em;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: var(--clr-dark);
+}
+
 #main-index-menu{
   width: 50%;
   padding: 0;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
   justify-content: space-between;
   font-family: monospace;
   height: 100%;
 }
 
 #main-index-menu li{
-  height: 100%;
-  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 25%;
   list-style-type: none;
+
 }
 
 #main-index-menu li a{
@@ -48,12 +105,14 @@ body{
   text-decoration: none;
   color: var(--ft-clr-light);
   height: 100%;
+  font-size: 1.5em;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 200ms ease;
+  transition: background-color 350ms ease-in-out;
 }
 
 #main-index-menu li a:hover{
+  outline: .0625em solid darkslategray;
   background-color: var(--clr-dark-hover);
 }
